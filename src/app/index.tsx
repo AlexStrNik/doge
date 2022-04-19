@@ -19,8 +19,6 @@ app.get("/", function (req, res) {
   // @ts-ignore
   const doge = App({ ctx, items }) as DogeBlock;
 
-  console.log(JSON.stringify(doge, null, 2));
-
   const appString = renderToString(<AppClient doge={doge} />);
 
   res.send(
@@ -31,4 +29,6 @@ app.get("/", function (req, res) {
   );
 });
 
-app.listen(3000);
+app.listen(3000, () => {
+  console.log("Listen on: http://localhost:3000");
+});

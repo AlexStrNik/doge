@@ -44,8 +44,6 @@ declare global {
 global.dogeBlocks = global.dogeBlocks || {};
 
 export function dogeRender(block: DogeBlock): ReactElement {
-  console.log("Rendering " + block.tag);
-
   if (!block.tag) {
     // @ts-ignore
     return block as ReactElement;
